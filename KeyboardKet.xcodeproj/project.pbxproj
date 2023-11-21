@@ -95,6 +95,8 @@
 		6E7961742B07C0CA00FA6609 /* KeyboardKet */ = {
 			isa = PBXGroup;
 			children = (
+				6EA9FCCC2B0CF44400C523CE /* Source */,
+				6EA9FCCB2B0CF43200C523CE /* Resource */,
 				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
 				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
 				6E7961792B07C0CA00FA6609 /* ViewController.swift */,
@@ -119,6 +121,20 @@
 				6E7961982B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift */,
 			);
 			path = KeyboardKetUITests;
+			sourceTree = "<group>";
+		};
+		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6EA9FCCC2B0CF44400C523CE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
