@@ -72,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E5AF78E2B0CFAAA007F8B6E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
+				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E5AF78F2B0CFAB5007F8B6E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961832B07C0CC00FA6609 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		6E7961692B07C0CA00FA6609 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +114,7 @@
 			children = (
 				6EA9FCCC2B0CF44400C523CE /* Source */,
 				6EA9FCCB2B0CF43200C523CE /* Resource */,
-				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
-				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
 				6E7961792B07C0CA00FA6609 /* ViewController.swift */,
-				6E79617E2B07C0CC00FA6609 /* Assets.xcassets */,
-				6E7961832B07C0CC00FA6609 /* Info.plist */,
 			);
 			path = KeyboardKet;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6E79617E2B07C0CC00FA6609 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -133,6 +147,8 @@
 		6EA9FCCC2B0CF44400C523CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E5AF78F2B0CFAB5007F8B6E /* Config */,
+				6E5AF78E2B0CFAAA007F8B6E /* App */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -433,7 +449,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Info.plist;
+				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -460,7 +476,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Info.plist;
+				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
