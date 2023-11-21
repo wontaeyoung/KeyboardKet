@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E5AF7952B0CFC5F007F8B6E /* DataDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AF7942B0CFC5F007F8B6E /* DataDefault.swift */; };
+		6E5AF7972B0CFC67007F8B6E /* DomainDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AF7962B0CFC67007F8B6E /* DomainDefault.swift */; };
+		6E5AF7992B0CFC6D007F8B6E /* PresenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AF7982B0CFC6D007F8B6E /* PresenterDefault.swift */; };
+		6E5AF79B2B0CFC74007F8B6E /* UtilityDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AF79A2B0CFC74007F8B6E /* UtilityDefault.swift */; };
 		6E7961762B07C0CA00FA6609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961752B07C0CA00FA6609 /* AppDelegate.swift */; };
 		6E7961782B07C0CA00FA6609 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */; };
 		6E79617A2B07C0CA00FA6609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961792B07C0CA00FA6609 /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E5AF7942B0CFC5F007F8B6E /* DataDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDefault.swift; sourceTree = "<group>"; };
+		6E5AF7962B0CFC67007F8B6E /* DomainDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDefault.swift; sourceTree = "<group>"; };
+		6E5AF7982B0CFC6D007F8B6E /* PresenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDefault.swift; sourceTree = "<group>"; };
+		6E5AF79A2B0CFC74007F8B6E /* UtilityDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityDefault.swift; sourceTree = "<group>"; };
 		6E7961722B07C0CA00FA6609 /* KeyboardKet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardKet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7961752B07C0CA00FA6609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +80,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E5AF78E2B0CFAAA007F8B6E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
+				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E5AF78F2B0CFAB5007F8B6E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961832B07C0CC00FA6609 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6E5AF7902B0CFBF8007F8B6E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AF7942B0CFC5F007F8B6E /* DataDefault.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6E5AF7912B0CFC15007F8B6E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AF7962B0CFC67007F8B6E /* DomainDefault.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6E5AF7922B0CFC21007F8B6E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961792B07C0CA00FA6609 /* ViewController.swift */,
+				6E5AF7982B0CFC6D007F8B6E /* PresenterDefault.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6E5AF7932B0CFC29007F8B6E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AF79A2B0CFC74007F8B6E /* UtilityDefault.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		6E7961692B07C0CA00FA6609 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +153,8 @@
 		6E7961742B07C0CA00FA6609 /* KeyboardKet */ = {
 			isa = PBXGroup;
 			children = (
-				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
-				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
-				6E7961792B07C0CA00FA6609 /* ViewController.swift */,
-				6E79617E2B07C0CC00FA6609 /* Assets.xcassets */,
-				6E7961832B07C0CC00FA6609 /* Info.plist */,
+				6EA9FCCC2B0CF44400C523CE /* Source */,
+				6EA9FCCB2B0CF43200C523CE /* Resource */,
 			);
 			path = KeyboardKet;
 			sourceTree = "<group>";
@@ -119,6 +174,27 @@
 				6E7961982B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift */,
 			);
 			path = KeyboardKetUITests;
+			sourceTree = "<group>";
+		};
+		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6E79617E2B07C0CC00FA6609 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6EA9FCCC2B0CF44400C523CE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AF78E2B0CFAAA007F8B6E /* App */,
+				6E5AF78F2B0CFAB5007F8B6E /* Config */,
+				6E5AF7902B0CFBF8007F8B6E /* Data */,
+				6E5AF7912B0CFC15007F8B6E /* Domain */,
+				6E5AF7922B0CFC21007F8B6E /* Presenter */,
+				6E5AF7932B0CFC29007F8B6E /* Utility */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5AF7992B0CFC6D007F8B6E /* PresenterDefault.swift in Sources */,
+				6E5AF79B2B0CFC74007F8B6E /* UtilityDefault.swift in Sources */,
 				6E79617A2B07C0CA00FA6609 /* ViewController.swift in Sources */,
 				6E7961762B07C0CA00FA6609 /* AppDelegate.swift in Sources */,
+				6E5AF7972B0CFC67007F8B6E /* DomainDefault.swift in Sources */,
 				6E7961782B07C0CA00FA6609 /* SceneDelegate.swift in Sources */,
+				6E5AF7952B0CFC5F007F8B6E /* DataDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +497,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Info.plist;
+				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -444,7 +524,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Info.plist;
+				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
