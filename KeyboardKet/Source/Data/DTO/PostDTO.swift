@@ -15,5 +15,5 @@ struct PostDTO {
     let createAt: Date
     let updateAt: Date
     let productImages: [String]
-    let status: String
+    let status: Post.Status
 }
