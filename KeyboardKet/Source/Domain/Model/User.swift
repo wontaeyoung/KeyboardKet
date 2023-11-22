@@ -9,7 +9,7 @@ import Foundation
 
 struct User {
   // MARK: - Property
-  let id: String
+  let id: UUID
   let nickname: String
   let profileImage: URL?
   let postIDs: [String]
