@@ -21,6 +21,6 @@ struct Post {
   let content: String
   let createAt: Date
   let updateAt: Date
-  let productImages: [URL]
+  let productImages: [URL?]
   let status: Status
 }
