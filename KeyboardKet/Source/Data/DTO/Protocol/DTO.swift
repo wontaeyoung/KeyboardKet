@@ -6,5 +6,5 @@
 //
 
 protocol DTO: Codable {
-  func toModel() -> Model
+  func toModel() throws -> Model
 }
