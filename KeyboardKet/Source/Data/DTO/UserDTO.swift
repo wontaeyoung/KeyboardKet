@@ -14,5 +14,4 @@ struct UserDTO {
   let profileImage: String
   let postIDs: [String]
   let createAt: Date
-  let updateAt: Date
 }

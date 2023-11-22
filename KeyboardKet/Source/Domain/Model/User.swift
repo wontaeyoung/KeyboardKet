@@ -14,5 +14,4 @@ struct User {
   let profileImage: URL?
   let postIDs: [String]
   let createAt: Date
-  let updateAt: Date
 }
