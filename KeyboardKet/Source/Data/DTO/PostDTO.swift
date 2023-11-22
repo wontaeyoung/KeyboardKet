@@ -8,12 +8,12 @@
 import Foundation
 
 struct PostDTO {
-    // MARK: - Property
-    let id: String
-    let title: String
-    let content: String
-    let createAt: Date
-    let updateAt: Date
-    let productImages: [String]
-    let status: Post.Status
+  // MARK: - Property
+  let id: String
+  let title: String
+  let content: String
+  let createAt: Date
+  let updateAt: Date
+  let productImages: [String]
+  let status: Post.Status
 }
