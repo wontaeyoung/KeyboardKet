@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post {
+struct Post: Model {
   enum Status: String, Codable {
     case forSale
     case reserved
@@ -23,4 +23,17 @@ struct Post {
   let updateAt: Date
   let productImages: [URL?]
   let status: Status
+  
+  // MARK: - Mapping
+  func toDTO() -> DTO {
+    return PostDTO(
+      id: id.uuidString,
+      title: title,
+      content: content,
+      createAt: createAt,
+      updateAt: updateAt,
+      productImages: productImages.map { $0?.description ?? "" },
+      status: status
+    )
+  }
 }
