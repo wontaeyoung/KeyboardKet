@@ -9,6 +9,7 @@ import Foundation
 
 struct Post: Model {
   enum Status: String, Codable {
+    case draft
     case forSale
     case reserved
     case hidden
