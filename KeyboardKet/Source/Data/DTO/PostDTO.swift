@@ -18,14 +18,28 @@ struct PostDTO: DTO {
   let status: Post.Status
   
   // MARK: - Mapping
-  func toModel() -> Model {
+  func toModel() throws -> Model {
+    guard let uuid = UUID(uuidString: id) else {
+      throw DTOError.mapToModelFailed
+    }
+    
+    var urls: [URL] = []
+    
+    try productImages.forEach { urlStr in
+      guard let url = URL(string: urlStr) else {
+        throw DTOError.mapToModelFailed
+      }
+      
+      urls.append(url)
+    }
+    
     return Post(
-      id: UUID(uuidString: id) ?? UUID(),
+      id: uuid,
       title: title,
       content: content,
       createAt: createAt,
       updateAt: updateAt,
-      productImages: productImages.map { URL(string: $0) },
+      productImages: urls,
       status: status
     )
   }
