@@ -21,18 +21,18 @@ struct Post: Model {
   let content: String
   let createAt: Date
   let updateAt: Date
-  let productImages: [URL?]
+  let productImages: [URL]
   let status: Status
   
   // MARK: - Mapping
-  func toDTO() -> DTO {
+  func toDTO() throws -> DTO {
     return PostDTO(
       id: id.uuidString,
       title: title,
       content: content,
       createAt: createAt,
       updateAt: updateAt,
-      productImages: productImages.map { $0?.description ?? "" },
+      productImages: productImages.map { $0.description },
       status: status
     )
   }
