@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PostDTO {
+struct PostDTO: DTO {
   // MARK: - Property
   let id: String
   let title: String
@@ -16,4 +16,17 @@ struct PostDTO {
   let updateAt: Date
   let productImages: [String]
   let status: Post.Status
+  
+  // MARK: - Mapping
+  func toModel() -> Model {
+    return Post(
+      id: UUID(uuidString: id) ?? UUID(),
+      title: title,
+      content: content,
+      createAt: createAt,
+      updateAt: updateAt,
+      productImages: productImages.map { URL(string: $0) },
+      status: status
+    )
+  }
 }
