@@ -16,11 +16,18 @@ struct UserDTO: DTO {
   let createAt: Date
   
   // MARK: - Mapping
-  func toModel() -> Model {
+  func toModel() throws -> Model {
+    guard 
+      let uuid = UUID(uuidString: id),
+      let url = URL(string: profileImage)
+    else {
+      throw DTOError.mapToModelFailed
+    }
+    
     return User(
-      id: UUID(uuidString: id) ?? UUID(),
+      id: uuid,
       nickname: nickname,
-      profileImage: URL(string: profileImage),
+      profileImage: url,
       postIDs: postIDs,
       createAt: createAt
     )
