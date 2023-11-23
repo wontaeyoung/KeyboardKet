@@ -8,7 +8,7 @@
 import Foundation
 
 struct Review {
-  enum TradeType {
+  enum TradeType: String, Codable {
     case purchase
     case sale
   }
