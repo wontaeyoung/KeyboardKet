@@ -12,6 +12,6 @@ struct ReviewDTO {
   let id: String
   let postID: String
   let traderID: String
-  let tradeType: String
+  let tradeType: Review.TradeType
   let createAt: Date
 }
