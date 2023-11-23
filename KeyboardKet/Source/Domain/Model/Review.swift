@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review {
+struct Review: Model {
   enum TradeType: String, Codable {
     case purchase
     case sale
@@ -19,4 +19,15 @@ struct Review {
   let traderID: UUID
   let tradeType: TradeType
   let createAt: Date
+  
+  // MARK: - Mapping
+  func toDTO() throws -> DTO {
+    return ReviewDTO(
+      id: id.uuidString,
+      postID: postID.uuidString,
+      traderID: traderID.uuidString,
+      tradeType: tradeType,
+      createAt: createAt
+    )
+  }
 }
