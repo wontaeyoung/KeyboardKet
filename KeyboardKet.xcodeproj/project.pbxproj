@@ -409,9 +409,6 @@
 		6E5AF7A22B0D1FE5007F8B6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6E5AF7A82B0D2C8B007F8B6E /* Post.swift */,
-				6ECA4BC92B0E4BDD0041E90C /* User.swift */,
-				6E11E85D2B0E79AD0042FC91 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -527,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				6E7FCD972B10FBA900FBDF2B /* PostDomain.h */,
+				6E7FCDF22B11091800FBDF2B /* Model */,
 			);
 			path = PostDomain;
 			sourceTree = "<group>";
@@ -543,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				6E7FCDB72B11025F00FBDF2B /* AuthFeature.h */,
+				6E7FCDF32B11099D00FBDF2B /* Model */,
 			);
 			path = AuthFeature;
 			sourceTree = "<group>";
@@ -588,6 +587,23 @@
 				6E5AF7A32B0D1FED007F8B6E /* Protocol */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		6E7FCDF22B11091800FBDF2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AF7A82B0D2C8B007F8B6E /* Post.swift */,
+				6E11E85D2B0E79AD0042FC91 /* Review.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E7FCDF32B11099D00FBDF2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA4BC92B0E4BDD0041E90C /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
