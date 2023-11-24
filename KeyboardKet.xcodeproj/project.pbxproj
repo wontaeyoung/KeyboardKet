@@ -321,7 +321,6 @@
 			children = (
 				6E7961752B07C0CA00FA6609 /* AppDelegate.swift */,
 				6E7961772B07C0CA00FA6609 /* SceneDelegate.swift */,
-				6E11E8542B0E62560042FC91 /* AppError.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -474,6 +473,7 @@
 		6E7FCD452B10DFD900FBDF2B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6E7FCDE02B11049D00FBDF2B /* Error */,
 				6E7FCD462B10DFD900FBDF2B /* Core.h */,
 			);
 			path = Core;
@@ -541,6 +541,14 @@
 				6E7FCDD72B11044400FBDF2B /* Data.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		6E7FCDE02B11049D00FBDF2B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				6E11E8542B0E62560042FC91 /* AppError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
