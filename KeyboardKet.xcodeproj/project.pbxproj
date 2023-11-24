@@ -44,6 +44,9 @@
 		6E7FCDA82B11004000FBDF2B /* FirestoreService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7FCDA72B11004000FBDF2B /* FirestoreService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7FCDAB2B11004000FBDF2B /* FirestoreService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDA52B11004000FBDF2B /* FirestoreService.framework */; };
 		6E7FCDAC2B11004000FBDF2B /* FirestoreService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDA52B11004000FBDF2B /* FirestoreService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E7FCDB82B11025F00FBDF2B /* AuthFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7FCDB72B11025F00FBDF2B /* AuthFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7FCDBB2B11026000FBDF2B /* AuthFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDB52B11025F00FBDF2B /* AuthFeature.framework */; };
+		6E7FCDBC2B11026000FBDF2B /* AuthFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDB52B11025F00FBDF2B /* AuthFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6ECA4BCA2B0E4BDD0041E90C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA4BC92B0E4BDD0041E90C /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,13 @@
 			remoteGlobalIDString = 6E7FCDA42B11004000FBDF2B;
 			remoteInfo = FirestoreService;
 		};
+		6E7FCDB92B11026000FBDF2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E79616A2B07C0CA00FA6609 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E7FCDB42B11025F00FBDF2B;
+			remoteInfo = AuthFeature;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +124,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6E7FCDAC2B11004000FBDF2B /* FirestoreService.framework in Embed Frameworks */,
+				6E7FCDBC2B11026000FBDF2B /* AuthFeature.framework in Embed Frameworks */,
 				6E7FCD6C2B10E0A500FBDF2B /* UI.framework in Embed Frameworks */,
 				6E7FCD4B2B10DFD900FBDF2B /* Core.framework in Embed Frameworks */,
 				6E7FCD9C2B10FBA900FBDF2B /* PostDomain.framework in Embed Frameworks */,
@@ -161,6 +172,8 @@
 		6E7FCD972B10FBA900FBDF2B /* PostDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostDomain.h; sourceTree = "<group>"; };
 		6E7FCDA52B11004000FBDF2B /* FirestoreService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirestoreService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7FCDA72B11004000FBDF2B /* FirestoreService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirestoreService.h; sourceTree = "<group>"; };
+		6E7FCDB52B11025F00FBDF2B /* AuthFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AuthFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7FCDB72B11025F00FBDF2B /* AuthFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthFeature.h; sourceTree = "<group>"; };
 		6ECA4BC92B0E4BDD0041E90C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7FCDAB2B11004000FBDF2B /* FirestoreService.framework in Frameworks */,
+				6E7FCDBB2B11026000FBDF2B /* AuthFeature.framework in Frameworks */,
 				6E7FCD6B2B10E0A500FBDF2B /* UI.framework in Frameworks */,
 				6E7FCD4A2B10DFD900FBDF2B /* Core.framework in Frameworks */,
 				6E7FCD9B2B10FBA900FBDF2B /* PostDomain.framework in Frameworks */,
@@ -228,6 +242,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E7FCDA22B11004000FBDF2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E7FCDB22B11025F00FBDF2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,6 +377,7 @@
 				6E7FCD862B10F1CC00FBDF2B /* AuthDomain */,
 				6E7FCD962B10FBA900FBDF2B /* PostDomain */,
 				6E7FCDA62B11004000FBDF2B /* FirestoreService */,
+				6E7FCDB62B11025F00FBDF2B /* AuthFeature */,
 				6E7961732B07C0CA00FA6609 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -372,6 +394,7 @@
 				6E7FCD852B10F1CC00FBDF2B /* AuthDomain.framework */,
 				6E7FCD952B10FBA800FBDF2B /* PostDomain.framework */,
 				6E7FCDA52B11004000FBDF2B /* FirestoreService.framework */,
+				6E7FCDB52B11025F00FBDF2B /* AuthFeature.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -450,6 +473,14 @@
 			path = FirestoreService;
 			sourceTree = "<group>";
 		};
+		6E7FCDB62B11025F00FBDF2B /* AuthFeature */ = {
+			isa = PBXGroup;
+			children = (
+				6E7FCDB72B11025F00FBDF2B /* AuthFeature.h */,
+			);
+			path = AuthFeature;
+			sourceTree = "<group>";
+		};
 		6EA9FCCB2B0CF43200C523CE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +553,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E7FCDB02B11025F00FBDF2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7FCDB82B11025F00FBDF2B /* AuthFeature.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -543,6 +582,7 @@
 				6E7FCD8A2B10F1CC00FBDF2B /* PBXTargetDependency */,
 				6E7FCD9A2B10FBA900FBDF2B /* PBXTargetDependency */,
 				6E7FCDAA2B11004000FBDF2B /* PBXTargetDependency */,
+				6E7FCDBA2B11026000FBDF2B /* PBXTargetDependency */,
 			);
 			name = KeyboardKet;
 			productName = KeyboardKet;
@@ -693,6 +733,24 @@
 			productReference = 6E7FCDA52B11004000FBDF2B /* FirestoreService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6E7FCDB42B11025F00FBDF2B /* AuthFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E7FCDBD2B11026000FBDF2B /* Build configuration list for PBXNativeTarget "AuthFeature" */;
+			buildPhases = (
+				6E7FCDB02B11025F00FBDF2B /* Headers */,
+				6E7FCDB12B11025F00FBDF2B /* Sources */,
+				6E7FCDB22B11025F00FBDF2B /* Frameworks */,
+				6E7FCDB32B11025F00FBDF2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthFeature;
+			productName = AuthFeature;
+			productReference = 6E7FCDB52B11025F00FBDF2B /* AuthFeature.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -732,6 +790,9 @@
 					6E7FCDA42B11004000FBDF2B = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
+					6E7FCDB42B11025F00FBDF2B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 6E79616D2B07C0CA00FA6609 /* Build configuration list for PBXProject "KeyboardKet" */;
@@ -756,6 +817,7 @@
 				6E7FCD842B10F1CC00FBDF2B /* AuthDomain */,
 				6E7FCD942B10FBA800FBDF2B /* PostDomain */,
 				6E7FCDA42B11004000FBDF2B /* FirestoreService */,
+				6E7FCDB42B11025F00FBDF2B /* AuthFeature */,
 			);
 		};
 /* End PBXProject section */
@@ -819,6 +881,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E7FCDA32B11004000FBDF2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E7FCDB32B11025F00FBDF2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -910,6 +979,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E7FCDB12B11025F00FBDF2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -952,6 +1028,11 @@
 			isa = PBXTargetDependency;
 			target = 6E7FCDA42B11004000FBDF2B /* FirestoreService */;
 			targetProxy = 6E7FCDA92B11004000FBDF2B /* PBXContainerItemProxy */;
+		};
+		6E7FCDBA2B11026000FBDF2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E7FCDB42B11025F00FBDF2B /* AuthFeature */;
+			targetProxy = 6E7FCDB92B11026000FBDF2B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1615,6 +1696,74 @@
 			};
 			name = Release;
 		};
+		6E7FCDBE2B11026000FBDF2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AuthFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E7FCDBF2B11026000FBDF2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AuthFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1704,6 +1853,15 @@
 			buildConfigurations = (
 				6E7FCDAE2B11004000FBDF2B /* Debug */,
 				6E7FCDAF2B11004000FBDF2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E7FCDBD2B11026000FBDF2B /* Build configuration list for PBXNativeTarget "AuthFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7FCDBE2B11026000FBDF2B /* Debug */,
+				6E7FCDBF2B11026000FBDF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
