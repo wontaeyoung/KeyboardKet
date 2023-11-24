@@ -336,7 +336,6 @@
 		6E5AF7902B0CFBF8007F8B6E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				6E5AF79C2B0D0F70007F8B6E /* DTO */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -539,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				6E7FCDD72B11044400FBDF2B /* Data.h */,
+				6E5AF79C2B0D0F70007F8B6E /* DTO */,
 			);
 			path = Data;
 			sourceTree = "<group>";
