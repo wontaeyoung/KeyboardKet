@@ -564,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				6E7FCDB72B11025F00FBDF2B /* AuthFeature.h */,
-				6E7FCDF32B11099D00FBDF2B /* Model */,
 			);
 			path = AuthFeature;
 			sourceTree = "<group>";
@@ -654,6 +653,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC661E72B1383BC00E1BC7B /* UserDomain.h */,
+				6E7FCDF32B11099D00FBDF2B /* Model */,
 			);
 			path = UserDomain;
 			sourceTree = "<group>";
