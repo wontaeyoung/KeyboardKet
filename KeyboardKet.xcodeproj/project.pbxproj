@@ -62,9 +62,9 @@
 		6EC661F82B1392B300E1BC7B /* FirebaseAuthService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC661F72B1392B300E1BC7B /* FirebaseAuthService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EC661FB2B1392B300E1BC7B /* FirebaseAuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC661F52B1392B300E1BC7B /* FirebaseAuthService.framework */; };
 		6EC661FC2B1392B300E1BC7B /* FirebaseAuthService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC661F52B1392B300E1BC7B /* FirebaseAuthService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6EC662082B1392CA00E1BC7B /* FirebaseStroageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC662072B1392CA00E1BC7B /* FirebaseStroageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EC6620B2B1392CA00E1BC7B /* FirebaseStroageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC662052B1392CA00E1BC7B /* FirebaseStroageService.framework */; };
-		6EC6620C2B1392CA00E1BC7B /* FirebaseStroageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC662052B1392CA00E1BC7B /* FirebaseStroageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EC662082B1392CA00E1BC7B /* FirebaseStorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC662072B1392CA00E1BC7B /* FirebaseStorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EC6620B2B1392CA00E1BC7B /* FirebaseStorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC662052B1392CA00E1BC7B /* FirebaseStorageService.framework */; };
+		6EC6620C2B1392CA00E1BC7B /* FirebaseStorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC662052B1392CA00E1BC7B /* FirebaseStorageService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EC662122B13934A00E1BC7B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6EC662112B13934A00E1BC7B /* FirebaseAuth */; };
 		6EC662142B13934A00E1BC7B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6EC662132B13934A00E1BC7B /* FirebaseFirestore */; };
 		6EC662162B13934A00E1BC7B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6EC662152B13934A00E1BC7B /* FirebaseFirestoreSwift */; };
@@ -201,7 +201,7 @@
 				6E7FCD9C2B10FBA900FBDF2B /* PostDomain.framework in Embed Frameworks */,
 				6E7FCDDC2B11044400FBDF2B /* Data.framework in Embed Frameworks */,
 				6E7FCD5C2B10E02600FBDF2B /* Common.framework in Embed Frameworks */,
-				6EC6620C2B1392CA00E1BC7B /* FirebaseStroageService.framework in Embed Frameworks */,
+				6EC6620C2B1392CA00E1BC7B /* FirebaseStorageService.framework in Embed Frameworks */,
 				6E7FCD8C2B10F1CC00FBDF2B /* AuthDomain.framework in Embed Frameworks */,
 				6EC661EC2B1383BC00E1BC7B /* UserDomain.framework in Embed Frameworks */,
 			);
@@ -258,8 +258,8 @@
 		6EC661E72B1383BC00E1BC7B /* UserDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDomain.h; sourceTree = "<group>"; };
 		6EC661F52B1392B300E1BC7B /* FirebaseAuthService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAuthService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC661F72B1392B300E1BC7B /* FirebaseAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseAuthService.h; sourceTree = "<group>"; };
-		6EC662052B1392CA00E1BC7B /* FirebaseStroageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseStroageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EC662072B1392CA00E1BC7B /* FirebaseStroageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseStroageService.h; sourceTree = "<group>"; };
+		6EC662052B1392CA00E1BC7B /* FirebaseStorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseStorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC662072B1392CA00E1BC7B /* FirebaseStorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseStorageService.h; sourceTree = "<group>"; };
 		6EC662192B13957000E1BC7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6ECA4BC92B0E4BDD0041E90C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,7 +279,7 @@
 				6E7FCD9B2B10FBA900FBDF2B /* PostDomain.framework in Frameworks */,
 				6E7FCDDB2B11044400FBDF2B /* Data.framework in Frameworks */,
 				6E7FCD5B2B10E02600FBDF2B /* Common.framework in Frameworks */,
-				6EC6620B2B1392CA00E1BC7B /* FirebaseStroageService.framework in Frameworks */,
+				6EC6620B2B1392CA00E1BC7B /* FirebaseStorageService.framework in Frameworks */,
 				6E7FCD8B2B10F1CC00FBDF2B /* AuthDomain.framework in Frameworks */,
 				6EC661EB2B1383BC00E1BC7B /* UserDomain.framework in Frameworks */,
 			);
@@ -516,7 +516,7 @@
 				6E7FCDD62B11044400FBDF2B /* Data */,
 				6E7FCDA62B11004000FBDF2B /* FirestoreService */,
 				6EC661F62B1392B300E1BC7B /* FirebaseAuthService */,
-				6EC662062B1392CA00E1BC7B /* FirebaseStroageService */,
+				6EC662062B1392CA00E1BC7B /* FirebaseStorageService */,
 				6E7961732B07C0CA00FA6609 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 				6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */,
 				6EC661E52B1383BC00E1BC7B /* UserDomain.framework */,
 				6EC661F52B1392B300E1BC7B /* FirebaseAuthService.framework */,
-				6EC662052B1392CA00E1BC7B /* FirebaseStroageService.framework */,
+				6EC662052B1392CA00E1BC7B /* FirebaseStorageService.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -726,12 +726,12 @@
 			path = FirebaseAuthService;
 			sourceTree = "<group>";
 		};
-		6EC662062B1392CA00E1BC7B /* FirebaseStroageService */ = {
+		6EC662062B1392CA00E1BC7B /* FirebaseStorageService */ = {
 			isa = PBXGroup;
 			children = (
-				6EC662072B1392CA00E1BC7B /* FirebaseStroageService.h */,
+				6EC662072B1392CA00E1BC7B /* FirebaseStorageService.h */,
 			);
-			path = FirebaseStroageService;
+			path = FirebaseStorageService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -837,7 +837,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC662082B1392CA00E1BC7B /* FirebaseStroageService.h in Headers */,
+				6EC662082B1392CA00E1BC7B /* FirebaseStorageService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,9 +1134,9 @@
 			productReference = 6EC661F52B1392B300E1BC7B /* FirebaseAuthService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6EC662042B1392CA00E1BC7B /* FirebaseStroageService */ = {
+		6EC662042B1392CA00E1BC7B /* FirebaseStorageService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EC6620D2B1392CA00E1BC7B /* Build configuration list for PBXNativeTarget "FirebaseStroageService" */;
+			buildConfigurationList = 6EC6620D2B1392CA00E1BC7B /* Build configuration list for PBXNativeTarget "FirebaseStorageService" */;
 			buildPhases = (
 				6EC662002B1392CA00E1BC7B /* Headers */,
 				6EC662012B1392CA00E1BC7B /* Sources */,
@@ -1147,12 +1147,12 @@
 			);
 			dependencies = (
 			);
-			name = FirebaseStroageService;
+			name = FirebaseStorageService;
 			packageProductDependencies = (
 				6EC662172B13934A00E1BC7B /* FirebaseStorage */,
 			);
 			productName = FirebaseStroageService;
-			productReference = 6EC662052B1392CA00E1BC7B /* FirebaseStroageService.framework */;
+			productReference = 6EC662052B1392CA00E1BC7B /* FirebaseStorageService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1248,7 +1248,7 @@
 				6E7FCDD42B11044300FBDF2B /* Data */,
 				6E7FCDA42B11004000FBDF2B /* FirestoreService */,
 				6EC661F42B1392B300E1BC7B /* FirebaseAuthService */,
-				6EC662042B1392CA00E1BC7B /* FirebaseStroageService */,
+				6EC662042B1392CA00E1BC7B /* FirebaseStorageService */,
 			);
 		};
 /* End PBXProject section */
@@ -1580,7 +1580,7 @@
 		};
 		6EC6620A2B1392CA00E1BC7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6EC662042B1392CA00E1BC7B /* FirebaseStroageService */;
+			target = 6EC662042B1392CA00E1BC7B /* FirebaseStorageService */;
 			targetProxy = 6EC662092B1392CA00E1BC7B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2868,7 +2868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EC6620D2B1392CA00E1BC7B /* Build configuration list for PBXNativeTarget "FirebaseStroageService" */ = {
+		6EC6620D2B1392CA00E1BC7B /* Build configuration list for PBXNativeTarget "FirebaseStorageService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EC6620E2B1392CA00E1BC7B /* Debug */,
