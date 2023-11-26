@@ -56,6 +56,9 @@
 		6E7FCDE92B1107DB00FBDF2B /* DomainCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7FCDE82B1107DB00FBDF2B /* DomainCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7FCDEC2B1107DB00FBDF2B /* DomainCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */; };
 		6E7FCDED2B1107DB00FBDF2B /* DomainCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EC661E82B1383BC00E1BC7B /* UserDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC661E72B1383BC00E1BC7B /* UserDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EC661EB2B1383BC00E1BC7B /* UserDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC661E52B1383BC00E1BC7B /* UserDomain.framework */; };
+		6EC661EC2B1383BC00E1BC7B /* UserDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC661E52B1383BC00E1BC7B /* UserDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6ECA4BCA2B0E4BDD0041E90C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA4BC92B0E4BDD0041E90C /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +147,13 @@
 			remoteGlobalIDString = 6E7FCDE52B1107DB00FBDF2B;
 			remoteInfo = DomainCore;
 		};
+		6EC661E92B1383BC00E1BC7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E79616A2B07C0CA00FA6609 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EC661E42B1383BC00E1BC7B;
+			remoteInfo = UserDomain;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -163,6 +173,7 @@
 				6E7FCDDC2B11044400FBDF2B /* Data.framework in Embed Frameworks */,
 				6E7FCD5C2B10E02600FBDF2B /* Common.framework in Embed Frameworks */,
 				6E7FCD8C2B10F1CC00FBDF2B /* AuthDomain.framework in Embed Frameworks */,
+				6EC661EC2B1383BC00E1BC7B /* UserDomain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +224,8 @@
 		6E7FCDD72B11044400FBDF2B /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7FCDE82B1107DB00FBDF2B /* DomainCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomainCore.h; sourceTree = "<group>"; };
+		6EC661E52B1383BC00E1BC7B /* UserDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC661E72B1383BC00E1BC7B /* UserDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDomain.h; sourceTree = "<group>"; };
 		6ECA4BC92B0E4BDD0041E90C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +244,7 @@
 				6E7FCDDB2B11044400FBDF2B /* Data.framework in Frameworks */,
 				6E7FCD5B2B10E02600FBDF2B /* Common.framework in Frameworks */,
 				6E7FCD8B2B10F1CC00FBDF2B /* AuthDomain.framework in Frameworks */,
+				6EC661EB2B1383BC00E1BC7B /* UserDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +326,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E7FCDE32B1107DB00FBDF2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC661E22B1383BC00E1BC7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,6 +458,7 @@
 				6E7FCDC62B11027E00FBDF2B /* PostFeature */,
 				6E7FCDD62B11044400FBDF2B /* Data */,
 				6E7FCDE72B1107DB00FBDF2B /* DomainCore */,
+				6EC661E62B1383BC00E1BC7B /* UserDomain */,
 				6E7961732B07C0CA00FA6609 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -457,6 +479,7 @@
 				6E7FCDC52B11027E00FBDF2B /* PostFeature.framework */,
 				6E7FCDD52B11044300FBDF2B /* Data.framework */,
 				6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */,
+				6EC661E52B1383BC00E1BC7B /* UserDomain.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,6 +650,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		6EC661E62B1383BC00E1BC7B /* UserDomain */ = {
+			isa = PBXGroup;
+			children = (
+				6EC661E72B1383BC00E1BC7B /* UserDomain.h */,
+			);
+			path = UserDomain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -710,6 +741,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EC661E02B1383BC00E1BC7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC661E82B1383BC00E1BC7B /* UserDomain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -735,6 +774,7 @@
 				6E7FCDCA2B11027E00FBDF2B /* PBXTargetDependency */,
 				6E7FCDDA2B11044400FBDF2B /* PBXTargetDependency */,
 				6E7FCDEB2B1107DB00FBDF2B /* PBXTargetDependency */,
+				6EC661EA2B1383BC00E1BC7B /* PBXTargetDependency */,
 			);
 			name = KeyboardKet;
 			productName = KeyboardKet;
@@ -957,6 +997,24 @@
 			productReference = 6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6EC661E42B1383BC00E1BC7B /* UserDomain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EC661EF2B1383BC00E1BC7B /* Build configuration list for PBXNativeTarget "UserDomain" */;
+			buildPhases = (
+				6EC661E02B1383BC00E1BC7B /* Headers */,
+				6EC661E12B1383BC00E1BC7B /* Sources */,
+				6EC661E22B1383BC00E1BC7B /* Frameworks */,
+				6EC661E32B1383BC00E1BC7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UserDomain;
+			productName = UserDomain;
+			productReference = 6EC661E52B1383BC00E1BC7B /* UserDomain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1008,6 +1066,9 @@
 					6E7FCDE52B1107DB00FBDF2B = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
+					6EC661E42B1383BC00E1BC7B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 6E79616D2B07C0CA00FA6609 /* Build configuration list for PBXProject "KeyboardKet" */;
@@ -1036,6 +1097,7 @@
 				6E7FCDC42B11027E00FBDF2B /* PostFeature */,
 				6E7FCDD42B11044300FBDF2B /* Data */,
 				6E7FCDE52B1107DB00FBDF2B /* DomainCore */,
+				6EC661E42B1383BC00E1BC7B /* UserDomain */,
 			);
 		};
 /* End PBXProject section */
@@ -1127,6 +1189,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E7FCDE42B1107DB00FBDF2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC661E32B1383BC00E1BC7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1246,6 +1315,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EC661E12B1383BC00E1BC7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1308,6 +1384,11 @@
 			isa = PBXTargetDependency;
 			target = 6E7FCDE52B1107DB00FBDF2B /* DomainCore */;
 			targetProxy = 6E7FCDEA2B1107DB00FBDF2B /* PBXContainerItemProxy */;
+		};
+		6EC661EA2B1383BC00E1BC7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EC661E42B1383BC00E1BC7B /* UserDomain */;
+			targetProxy = 6EC661E92B1383BC00E1BC7B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2243,6 +2324,74 @@
 			};
 			name = Release;
 		};
+		6EC661ED2B1383BC00E1BC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UserDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6EC661EE2B1383BC00E1BC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UserDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2368,6 +2517,15 @@
 			buildConfigurations = (
 				6E7FCDEF2B1107DC00FBDF2B /* Debug */,
 				6E7FCDF02B1107DC00FBDF2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EC661EF2B1383BC00E1BC7B /* Build configuration list for PBXNativeTarget "UserDomain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC661ED2B1383BC00E1BC7B /* Debug */,
+				6EC661EE2B1383BC00E1BC7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
