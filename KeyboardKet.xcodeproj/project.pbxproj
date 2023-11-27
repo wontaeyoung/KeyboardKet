@@ -521,22 +521,7 @@
 		6E7961692B07C0CA00FA6609 = {
 			isa = PBXGroup;
 			children = (
-				6E7961742B07C0CA00FA6609 /* KeyboardKet */,
-				6E79618B2B07C0CC00FA6609 /* KeyboardKetTests */,
-				6E7961952B07C0CC00FA6609 /* KeyboardKetUITests */,
-				6E7FCD452B10DFD900FBDF2B /* Core */,
-				6E7FCD562B10E02600FBDF2B /* Common */,
-				6E7FCD662B10E0A500FBDF2B /* UI */,
-				6E7FCDE72B1107DB00FBDF2B /* DomainCore */,
-				6E7FCD862B10F1CC00FBDF2B /* AuthDomain */,
-				6EC661E62B1383BC00E1BC7B /* UserDomain */,
-				6E7FCD962B10FBA900FBDF2B /* PostDomain */,
-				6E7FCDB62B11025F00FBDF2B /* AuthFeature */,
-				6E7FCDC62B11027E00FBDF2B /* PostFeature */,
-				6E7FCDD62B11044400FBDF2B /* Data */,
-				6E7FCDA62B11004000FBDF2B /* FirestoreService */,
-				6EC661F62B1392B300E1BC7B /* FirebaseAuthService */,
-				6EC662062B1392CA00E1BC7B /* FirebaseStorageService */,
+				6EC662392B14B69200E1BC7B /* KeyboardKet */,
 				6E7961732B07C0CA00FA6609 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -788,6 +773,29 @@
 				6EC662342B13A0C700E1BC7B /* FirestoreField.swift */,
 			);
 			path = Impl;
+			sourceTree = "<group>";
+		};
+		6EC662392B14B69200E1BC7B /* KeyboardKet */ = {
+			isa = PBXGroup;
+			children = (
+				6E7961742B07C0CA00FA6609 /* KeyboardKet */,
+				6E79618B2B07C0CC00FA6609 /* KeyboardKetTests */,
+				6E7961952B07C0CC00FA6609 /* KeyboardKetUITests */,
+				6E7FCD452B10DFD900FBDF2B /* Core */,
+				6E7FCD562B10E02600FBDF2B /* Common */,
+				6E7FCD662B10E0A500FBDF2B /* UI */,
+				6E7FCDE72B1107DB00FBDF2B /* DomainCore */,
+				6E7FCD862B10F1CC00FBDF2B /* AuthDomain */,
+				6EC661E62B1383BC00E1BC7B /* UserDomain */,
+				6E7FCD962B10FBA900FBDF2B /* PostDomain */,
+				6E7FCDB62B11025F00FBDF2B /* AuthFeature */,
+				6E7FCDC62B11027E00FBDF2B /* PostFeature */,
+				6E7FCDD62B11044400FBDF2B /* Data */,
+				6E7FCDA62B11004000FBDF2B /* FirestoreService */,
+				6EC661F62B1392B300E1BC7B /* FirebaseAuthService */,
+				6EC662062B1392CA00E1BC7B /* FirebaseStorageService */,
+			);
+			path = KeyboardKet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
