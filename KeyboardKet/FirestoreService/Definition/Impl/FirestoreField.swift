@@ -23,4 +23,12 @@ enum FirestoreField {
     case productImages
     case status
   }
+  
+  enum Review: String, FirestoreSchema {
+    case id
+    case postID
+    case traderID
+    case tradeType
+    case createAt
+  }
 }
