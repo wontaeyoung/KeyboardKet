@@ -11,4 +11,7 @@ enum FirestoreQueryOperation {
   case equalTo(value: Any)
   case greaterThan(value: Any)
   case greaterThanOrEqualTo(value: Any)
+  case arrayContains(value: Any)
+  case `in`(values: [Any])
+  case arrayContainsAny(values: [Any])
 }
