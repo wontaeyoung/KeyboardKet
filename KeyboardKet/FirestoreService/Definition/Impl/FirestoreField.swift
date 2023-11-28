@@ -13,4 +13,14 @@ enum FirestoreField {
     case postIDs
     case createAt
   }
+  
+  enum Post: String, FirestoreSchema {
+    case id
+    case title
+    case content
+    case createAt
+    case updateAt
+    case productImages
+    case status
+  }
 }
