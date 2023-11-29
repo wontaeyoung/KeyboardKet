@@ -7,7 +7,7 @@
 
 import FirebaseFirestore
 
-final class FirestoreServiceImpl {
+public final class FirestoreServiceImpl: FirestoreService {
   // MARK: - Property
   private let database: Firestore
   
