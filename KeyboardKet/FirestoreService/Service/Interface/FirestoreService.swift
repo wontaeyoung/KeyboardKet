@@ -32,4 +32,10 @@ protocol FirestoreService {
       subCollection: FirestoreCollection,
       subDocumentID: String
   ) -> DocumentReference
+  
+  // MARK: - Create
+  func addDocument(
+      docPath documentPath: DocumentReference,
+      dto: DTO
+  ) throws
 }
