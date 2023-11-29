@@ -92,6 +92,26 @@ extension FirestoreServiceImpl {
     return snapshot.documents
   }
   
+  func getDocuments(
+    colPath collectionPath: CollectionReference,
+    field: FirestoreField,
+    operation: FirestoreQueryOperation
+  ) async throws -> [QueryDocumentSnapshot] {
+    let query: Query = makeQuery(
+      collectionPath,
+      field: field,
+      operation: operation
+    )
+    
+    let snapshot: QuerySnapshot = try await query.getDocuments()
+    
+    guard snapshot.isEmpty == false else {
+      throw FirestoreError.emptyQuery
+    }
+    
+    return snapshot.documents
+  }
+  
   // MARK: - Private
   private func makeQuery(
     _ collectionPath: CollectionReference,
