@@ -55,6 +55,7 @@
 		6E7FCDED2B1107DB00FBDF2B /* DomainCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCDE62B1107DB00FBDF2B /* DomainCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EA192A02B175C3000F8515B /* FirestoreFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1929F2B175C3000F8515B /* FirestoreFieldProtocol.swift */; };
 		6EA192A62B176B1000F8515B /* FirestoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA192A52B176B1000F8515B /* FirestoreServiceImpl.swift */; };
+		6EA192A82B17B6AB00F8515B /* KeyboardKet.app in Resources */ = {isa = PBXBuildFile; fileRef = 6E7961722B07C0CA00FA6609 /* KeyboardKet.app */; };
 		6EA1B7CC2B16509F00D2E050 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7FCD442B10DFD900FBDF2B /* Core.framework */; };
 		6EC661E82B1383BC00E1BC7B /* UserDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC661E72B1383BC00E1BC7B /* UserDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EC661EB2B1383BC00E1BC7B /* UserDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC661E52B1383BC00E1BC7B /* UserDomain.framework */; };
@@ -1327,6 +1328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA192A82B17B6AB00F8515B /* KeyboardKet.app in Resources */,
 				6EC6621A2B13957000E1BC7B /* GoogleService-Info.plist in Resources */,
 				6E79617F2B07C0CC00FA6609 /* Assets.xcassets in Resources */,
 			);

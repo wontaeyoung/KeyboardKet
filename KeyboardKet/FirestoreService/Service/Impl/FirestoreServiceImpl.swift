@@ -69,3 +69,26 @@ extension FirestoreServiceImpl {
     try documentPath.setData(from: dto)
   }
 }
+
+// MARK: - Read
+extension FirestoreServiceImpl {
+  func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot {
+    let document: DocumentSnapshot = try await documentPath.getDocument()
+    
+    guard document.exists else {
+      throw FirestoreError.noDocument(document: document)
+    }
+    
+    return document
+  }
+  
+  func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot] {
+    let snapshot: QuerySnapshot = try await collectionPath.getDocuments()
+    
+    guard snapshot.isEmpty == false else {
+      throw FirestoreError.emptyCollection
+    }
+    
+    return snapshot.documents
+  }
+}
