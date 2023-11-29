@@ -16,3 +16,44 @@ public final class FirestoreServiceImpl: FirestoreService {
     self.firestore = firestore
   }
 }
+
+// MARK: - Path
+extension FirestoreServiceImpl {
+  func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference {
+    return firestore
+      .collection(collection.name)
+  }
+  
+  func getDocumentPath(
+    col collection: FirestoreCollection,
+    docID documentID: String
+  ) -> DocumentReference {
+    return firestore
+      .collection(collection.name)
+      .document(documentID)
+  }
+  
+  func getCollectionPath(
+    supCol superCollection: FirestoreCollection,
+    supDocID superDocumentID: String,
+    subCol subCollection: FirestoreCollection
+  ) -> CollectionReference {
+    return firestore
+      .collection(superCollection.name)
+      .document(superDocumentID)
+      .collection(subCollection.name)
+  }
+  
+  func getDocumentPath(
+    supCol superCollection: FirestoreCollection,
+    supDocID superDocumentID: String,
+    subCol subCollection: FirestoreCollection,
+    subDocID subDocumentID: String
+  ) -> DocumentReference {
+    return firestore
+      .collection(superCollection.name)
+      .document(superDocumentID)
+      .collection(subCollection.name)
+      .document(subDocumentID)
+  }
+}
