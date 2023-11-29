@@ -12,25 +12,25 @@ protocol FirestoreService {
   
   // MARK: - Path
   func getCollectionPath(
-      collection: FirestoreCollection
+      col collection: FirestoreCollection
   ) -> CollectionReference
   
   func getDocumentPath(
-      collection: FirestoreCollection,
-      documentID: String
+      col collection: FirestoreCollection,
+      docID documentID: String
   ) -> DocumentReference
   
   func getCollectionPath(
-      superCollection: FirestoreCollection,
-      superDocumentID: String,
-      subCollection: FirestoreCollection
+      supCol superCollection: FirestoreCollection,
+      supDocID superDocumentID: String,
+      subCol subCollection: FirestoreCollection
   ) -> CollectionReference
   
   func getDocumentPath(
-      superCollection: FirestoreCollection,
-      superDocumentID: String,
-      subCollection: FirestoreCollection,
-      subDocumentID: String
+      supCol superCollection: FirestoreCollection,
+      supDocID superDocumentID: String,
+      subCol subCollection: FirestoreCollection,
+      subDocID subDocumentID: String
   ) -> DocumentReference
   
   // MARK: - Create
