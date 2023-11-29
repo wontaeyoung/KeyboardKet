@@ -14,27 +14,27 @@ protocol FirestoreService {
   func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference
   
   func getDocumentPath(
-      col collection: FirestoreCollection,
-      docID documentID: String
+    col collection: FirestoreCollection,
+    docID documentID: String
   ) -> DocumentReference
   
   func getCollectionPath(
-      supCol superCollection: FirestoreCollection,
-      supDocID superDocumentID: String,
-      subCol subCollection: FirestoreCollection
+    supCol superCollection: FirestoreCollection,
+    supDocID superDocumentID: String,
+    subCol subCollection: FirestoreCollection
   ) -> CollectionReference
   
   func getDocumentPath(
-      supCol superCollection: FirestoreCollection,
-      supDocID superDocumentID: String,
-      subCol subCollection: FirestoreCollection,
-      subDocID subDocumentID: String
+    supCol superCollection: FirestoreCollection,
+    supDocID superDocumentID: String,
+    subCol subCollection: FirestoreCollection,
+    subDocID subDocumentID: String
   ) -> DocumentReference
   
   // MARK: - Create
   func addDocument(
-      docPath documentPath: DocumentReference,
-      dto: DTO
+    docPath documentPath: DocumentReference,
+    dto: DTO
   ) throws
   
   // MARK: - Read
@@ -43,8 +43,8 @@ protocol FirestoreService {
   func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot]
   
   func getDocuments(
-      colPath collectionPath: CollectionReference,
-      field: FirestoreField,
-      operation: FirestoreQueryOperation
+    colPath collectionPath: CollectionReference,
+    field: FirestoreField,
+    operation: FirestoreQueryOperation
   ) async throws -> [QueryDocumentSnapshot]
 }
