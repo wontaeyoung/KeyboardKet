@@ -57,3 +57,13 @@ extension FirestoreServiceImpl {
       .document(subDocumentID)
   }
 }
+
+// MARK: - Create
+extension FirestoreServiceImpl {
+  func addDocument(
+    docPath documentPath: DocumentReference,
+    dto: DTO
+  ) throws {
+    try documentPath.setData(from: dto)
+  }
+}
