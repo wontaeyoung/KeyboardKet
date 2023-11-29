@@ -9,10 +9,10 @@ import FirebaseFirestore
 
 public final class FirestoreServiceImpl: FirestoreService {
   // MARK: - Property
-  private let database: Firestore
+  private let firestore: Firestore
   
   // MARK: - Initializer
-  init(db database: Firestore = .firestore()) {
-    self.database = database
+  init(firestore: Firestore = .firestore()) {
+    self.firestore = firestore
   }
 }
