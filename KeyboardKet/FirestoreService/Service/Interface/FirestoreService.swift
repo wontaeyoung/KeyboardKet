@@ -11,9 +11,7 @@ protocol FirestoreService {
   typealias FirestoreField = FirestoreFieldProtocol
   
   // MARK: - Path
-  func getCollectionPath(
-      col collection: FirestoreCollection
-  ) -> CollectionReference
+  func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference
   
   func getDocumentPath(
       col collection: FirestoreCollection,
