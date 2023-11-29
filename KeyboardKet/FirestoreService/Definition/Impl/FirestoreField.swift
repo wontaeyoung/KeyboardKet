@@ -6,7 +6,7 @@
 //
 
 enum FirestoreField {
-  enum User: String, FirestoreSchema {
+  enum User: String, FirestoreFieldProtocol {
     case id
     case nickname
     case profileImage
@@ -14,7 +14,7 @@ enum FirestoreField {
     case createAt
   }
   
-  enum Post: String, FirestoreSchema {
+  enum Post: String, FirestoreFieldProtocol {
     case id
     case title
     case content
@@ -24,7 +24,7 @@ enum FirestoreField {
     case status
   }
   
-  enum Review: String, FirestoreSchema {
+  enum Review: String, FirestoreFieldProtocol {
     case id
     case postID
     case traderID
