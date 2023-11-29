@@ -8,6 +8,8 @@
 import FirebaseFirestore
 
 public final class FirestoreServiceImpl: FirestoreService {
+  typealias FirestoreField = any FirestoreFieldProtocol
+  
   // MARK: - Property
   private let firestore: Firestore
   
