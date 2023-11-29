@@ -36,4 +36,15 @@ protocol FirestoreService {
       docPath documentPath: DocumentReference,
       dto: DTO
   ) throws
+  
+  // MARK: - Read
+  func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot
+  
+  func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot]
+  
+  func getDocuments(
+      colPath collectionPath: CollectionReference,
+      field: FirestoreField,
+      operation: FirestoreQueryOperation
+  ) async throws -> [QueryDocumentSnapshot]
 }
