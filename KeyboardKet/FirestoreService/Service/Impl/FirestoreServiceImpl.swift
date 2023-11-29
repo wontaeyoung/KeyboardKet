@@ -8,5 +8,11 @@
 import FirebaseFirestore
 
 final class FirestoreServiceImpl {
+  // MARK: - Property
+  private let database: Firestore
   
+  // MARK: - Initializer
+  init(db database: Firestore = .firestore()) {
+    self.database = database
+  }
 }
