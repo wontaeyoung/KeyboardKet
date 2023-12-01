@@ -7,7 +7,7 @@
 
 import FirebaseFirestore
 
-public final class FirestoreServiceImpl: FirestoreService {
+final class FirestoreServiceImpl: FirestoreService {
   typealias FirestoreField = any FirestoreFieldProtocol
   
   // MARK: - Property
