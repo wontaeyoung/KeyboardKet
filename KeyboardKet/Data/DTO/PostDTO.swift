@@ -39,6 +39,7 @@ struct PostDTO: DTO {
       content: content,
       createAt: createAt,
       updateAt: updateAt,
+      previewImage: nil,
       productImages: urls,
       status: status
     )
