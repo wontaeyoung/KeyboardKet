@@ -30,9 +30,9 @@
 		6E79618D2B07C0CC00FA6609 /* KeyboardKetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79618C2B07C0CC00FA6609 /* KeyboardKetTests.swift */; };
 		6E7961972B07C0CC00FA6609 /* KeyboardKetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961962B07C0CC00FA6609 /* KeyboardKetUITests.swift */; };
 		6E7961992B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961982B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift */; };
+		6E9657922B1A3B7300B175C2 /* FirestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC662222B13977C00E1BC7B /* FirestoreError.swift */; };
 		6EA192A02B175C3000F8515B /* FirestoreFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1929F2B175C3000F8515B /* FirestoreFieldProtocol.swift */; };
 		6EA192A62B176B1000F8515B /* FirestoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA192A52B176B1000F8515B /* FirestoreServiceImpl.swift */; };
-		6EA192A82B17B6AB00F8515B /* KeyboardKet.app in Resources */ = {isa = PBXBuildFile; fileRef = 6E7961722B07C0CA00FA6609 /* KeyboardKet.app */; };
 		6EC6621A2B13957000E1BC7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC662192B13957000E1BC7B /* GoogleService-Info.plist */; };
 		6EC6622A2B139CA300E1BC7B /* FirestoreSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC662292B139CA300E1BC7B /* FirestoreSchema.swift */; };
 		6EC662302B139E9B00E1BC7B /* FirestoreCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6622F2B139E9B00E1BC7B /* FirestoreCollection.swift */; };
@@ -181,11 +181,11 @@
 		6E5AF79C2B0D0F70007F8B6E /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				6E5AF7A62B0D22B8007F8B6E /* PostDTO.swift */,
+				6E11E85B2B0E6C500042FC91 /* ReviewDTO.swift */,
+				6E5AF7AA2B0DC12B007F8B6E /* UserDTO.swift */,
 				6E11E8532B0E62420042FC91 /* Error */,
 				6E5AF79F2B0D1DDA007F8B6E /* Protocol */,
-				6E5AF7A62B0D22B8007F8B6E /* PostDTO.swift */,
-				6E5AF7AA2B0DC12B007F8B6E /* UserDTO.swift */,
-				6E11E85B2B0E6C500042FC91 /* ReviewDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -218,8 +218,8 @@
 		6E6F9F812B1A390600D307F7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				6E6FA4E72B19D416005026AC /* Repository */,
 				6E7FCDF12B11082600FBDF2B /* Entity */,
+				6E6FA4E72B19D416005026AC /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -527,7 +527,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA192A82B17B6AB00F8515B /* KeyboardKet.app in Resources */,
 				6EC6621A2B13957000E1BC7B /* GoogleService-Info.plist in Resources */,
 				6E79617F2B07C0CC00FA6609 /* Assets.xcassets in Resources */,
 			);
@@ -571,6 +570,7 @@
 				6EA192A62B176B1000F8515B /* FirestoreServiceImpl.swift in Sources */,
 				6E11E85E2B0E79AD0042FC91 /* Review.swift in Sources */,
 				6E5AF7A52B0D1FF7007F8B6E /* Model.swift in Sources */,
+				6E9657922B1A3B7300B175C2 /* FirestoreError.swift in Sources */,
 				6E11E8552B0E62560042FC91 /* AppError.swift in Sources */,
 				6E5AF7AB2B0DC12B007F8B6E /* UserDTO.swift in Sources */,
 				6E7961782B07C0CA00FA6609 /* SceneDelegate.swift in Sources */,
@@ -741,7 +741,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
+				INFOPLIST_FILE = /Users/kaz/Documents/Dev/Project/Personal/UIKit/KeyboardKet/KeyboardKet/KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -769,7 +769,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75QZ7682T2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardKet/Source/Config/Info.plist;
+				INFOPLIST_FILE = /Users/kaz/Documents/Dev/Project/Personal/UIKit/KeyboardKet/KeyboardKet/KeyboardKet/Source/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
