@@ -6,7 +6,7 @@
 //
 
 protocol PostRepository {
-  func createPost(post: Post)
+  func createPost(post: Post) throws
   func fetchPosts()
   func updatePost(post: Post)
   func deletePost(postID: String)
