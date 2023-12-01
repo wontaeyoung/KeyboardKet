@@ -166,6 +166,12 @@ extension FirestoreServiceImpl {
           field.name,
           arrayContainsAny: values
         )
+        
+      case .orderBy(let type):
+        return collectionPath.order(
+          by: field.name,
+          descending: type == .descending ? true : false
+        )
     }
   }
 }
