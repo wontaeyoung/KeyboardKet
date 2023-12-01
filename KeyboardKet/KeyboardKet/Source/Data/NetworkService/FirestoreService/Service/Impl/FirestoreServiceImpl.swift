@@ -7,7 +7,7 @@
 
 import FirebaseFirestore
 
-public final class FirestoreServiceImpl: FirestoreService {
+final class FirestoreServiceImpl: FirestoreService {
   typealias FirestoreField = any FirestoreFieldProtocol
   
   // MARK: - Property
@@ -120,28 +120,123 @@ extension FirestoreServiceImpl {
   ) -> Query {
     switch operation {
       case .lessThan(let value):
-        return collectionPath.whereField(field.name, isLessThan: value)
+        return collectionPath.whereField(
+          field.name,
+          isLessThan: value
+        )
         
       case .lessThanOrEqualTo(let value):
-        return collectionPath.whereField(field.name, isLessThanOrEqualTo: value)
+        return collectionPath.whereField(
+          field.name,
+          isLessThanOrEqualTo: value
+        )
         
       case .equalTo(let value):
-        return collectionPath.whereField(field.name, isEqualTo: value)
+        return collectionPath.whereField(
+          field.name,
+          isEqualTo: value
+        )
         
       case .greaterThan(let value):
-        return collectionPath.whereField(field.name, isGreaterThan: value)
+        return collectionPath.whereField(
+          field.name,
+          isGreaterThan: value
+        )
         
       case .greaterThanOrEqualTo(let value):
-        return collectionPath.whereField(field.name, isGreaterThanOrEqualTo: value)
+        return collectionPath.whereField(
+          field.name,
+          isGreaterThanOrEqualTo: value
+        )
         
       case .arrayContains(let value):
-        return collectionPath.whereField(field.name, arrayContains: value)
+        return collectionPath.whereField(
+          field.name,
+          arrayContains: value
+        )
         
       case .in(let values):
-        return collectionPath.whereField(field.name, in: values)
+        return collectionPath.whereField(
+          field.name,
+          in: values
+        )
         
       case .arrayContainsAny(let values):
-        return collectionPath.whereField(field.name, arrayContainsAny: values)
+        return collectionPath.whereField(
+          field.name,
+          arrayContainsAny: values
+        )
+        
+      case .orderBy(let type):
+        return collectionPath.order(
+          by: field.name,
+          descending: type == .descending ? true : false
+        )
+    }
+  }
+}
+
+extension Query {
+  typealias FirestoreField = any FirestoreFieldProtocol
+  
+  func query(
+    field: FirestoreField,
+    operation: FirestoreQueryOperation
+  ) -> Query {
+    switch operation {
+      case .lessThan(let value):
+        return self.whereField(
+          field.name,
+          isLessThan: value
+        )
+        
+      case .lessThanOrEqualTo(let value):
+        return self.whereField(
+          field.name,
+          isLessThanOrEqualTo: value
+        )
+        
+      case .equalTo(let value):
+        return self.whereField(
+          field.name,
+          isEqualTo: value
+        )
+        
+      case .greaterThan(let value):
+        return self.whereField(
+          field.name,
+          isGreaterThan: value
+        )
+        
+      case .greaterThanOrEqualTo(let value):
+        return self.whereField(
+          field.name,
+          isGreaterThanOrEqualTo: value
+        )
+        
+      case .arrayContains(let value):
+        return self.whereField(
+          field.name,
+          arrayContains: value
+        )
+        
+      case .in(let values):
+        return self.whereField(
+          field.name,
+          in: values
+        )
+        
+      case .arrayContainsAny(let values):
+        return self.whereField(
+          field.name,
+          arrayContainsAny: values
+        )
+        
+      case .orderBy(let type):
+        return self.order(
+          by: field.name,
+          descending: type == .descending ? true : false
+        )
     }
   }
 }

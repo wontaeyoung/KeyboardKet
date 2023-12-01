@@ -8,7 +8,7 @@
 import FirebaseFirestore
 
 protocol FirestoreService {
-  associatedtype FirestoreField: FirestoreFieldProtocol
+  associatedtype FirestoreField = any FirestoreFieldProtocol
   
   // MARK: - Path
   func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference

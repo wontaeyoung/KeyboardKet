@@ -5,7 +5,6 @@
 //  Created by 원태영 on 11/27/23.
 //
 
-import Core
 import FirebaseFirestore
 
 enum FirestoreError {

@@ -5,7 +5,7 @@
 //  Created by 원태영 on 11/22/23.
 //
 
-import Foundation
+import UIKit
 
 struct Post: Model {
   enum Status: String, Codable {
@@ -22,6 +22,7 @@ struct Post: Model {
   let content: String
   let createAt: Date
   let updateAt: Date
+  let previewImage: UIImage?
   let productImages: [URL]
   let status: Status
   
