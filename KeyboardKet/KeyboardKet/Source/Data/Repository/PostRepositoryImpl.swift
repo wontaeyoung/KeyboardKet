@@ -18,7 +18,16 @@ final class PostRepositoryImpl: PostRepository {
   
   // MARK: - Method
   func createPost(post: Post) throws {
+    guard let dto = try post.toDTO() as? PostDTO else {
+      throw DTOError.mapToDTOFailed
+    }
     
+    let documentPath: DocumentReference = firestoreService.getDocumentPath(
+      col: .Post,
+      docID: dto.id
+    )
+    
+    try firestoreService.addDocument(docPath: documentPath, dto: dto)
   }
   
   func fetchPosts() {
