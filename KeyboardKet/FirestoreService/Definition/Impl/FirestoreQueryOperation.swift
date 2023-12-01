@@ -19,5 +19,5 @@ enum FirestoreQueryOperation {
   case arrayContains(value: Any)
   case `in`(values: [Any])
   case arrayContainsAny(values: [Any])
-  case orderBy(value: Any, type: SortType)
+  case orderBy(type: SortType)
 }
