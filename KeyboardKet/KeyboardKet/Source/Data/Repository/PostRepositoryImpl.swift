@@ -30,7 +30,7 @@ final class PostRepositoryImpl: PostRepository {
     try firestoreService.addDocument(docPath: documentPath, dto: dto)
   }
   
-  func fetchPosts() {
+  func fetchPosts() async throws -> [Post] {
     
   }
   
