@@ -32,9 +32,9 @@ protocol FirestoreService {
   ) -> DocumentReference
   
   // MARK: - Create
-  func addDocument(
+  func addDocument<T: DTO>(
     docPath documentPath: DocumentReference,
-    dto: DTO
+    dto: T
   ) throws
   
   // MARK: - Read
