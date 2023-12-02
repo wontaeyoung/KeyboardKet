@@ -37,6 +37,11 @@ protocol FirestoreService {
     dto: T
   ) throws
   
+  func create<T: DTO>(
+    col: FirestoreCollection,
+    dto: T
+  ) throws
+  
   // MARK: - Read
   func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot
   

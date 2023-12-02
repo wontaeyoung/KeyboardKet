@@ -175,3 +175,18 @@ extension FirestoreServiceImpl {
     }
   }
 }
+
+extension FirestoreServiceImpl {
+  func create<T: DTO>(
+    col: FirestoreCollection,
+    dto: T
+  ) throws {
+    guard let id = dto.id as? String else {
+      throw DTOError.castIDFailed
+    }
+    
+    let docPath: DocumentReference = getDocumentPath(col: col, docID: id)
+    
+    try addDocument(docPath: docPath, dto: dto)
+  }
+}
