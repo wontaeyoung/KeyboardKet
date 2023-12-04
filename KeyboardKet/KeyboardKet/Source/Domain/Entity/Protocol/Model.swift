@@ -6,5 +6,5 @@
 //
 
 protocol Model {
-  func toDTO() throws -> DTO
+  func toDTO() throws -> any DTO
 }

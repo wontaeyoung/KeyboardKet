@@ -21,7 +21,7 @@ struct Review: Model {
   let createAt: Date
   
   // MARK: - Mapping
-  func toDTO() throws -> DTO {
+  func toDTO() throws -> any DTO {
     return ReviewDTO(
       id: id.uuidString,
       postID: postID.uuidString,

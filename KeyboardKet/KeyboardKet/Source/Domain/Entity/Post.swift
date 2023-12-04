@@ -27,7 +27,7 @@ struct Post: Model {
   let status: Status
   
   // MARK: - Mapping
-  func toDTO() throws -> DTO {
+  func toDTO() throws -> any DTO {
     return PostDTO(
       id: id.uuidString,
       title: title,

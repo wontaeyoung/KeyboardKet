@@ -7,10 +7,10 @@
 
 final class PostRepositoryImpl: PostRepository {
   // MARK: - Property
-  private let firestoreService: FirestoreService
+  private let firestoreService: any FirestoreService
   
   // MARK: - Initializer
-  init(firestoreService: FirestoreService) {
+  init(firestoreService: any FirestoreService) {
     self.firestoreService = firestoreService
   }
   
