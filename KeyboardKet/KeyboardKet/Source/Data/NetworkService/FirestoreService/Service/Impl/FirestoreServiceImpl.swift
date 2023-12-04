@@ -29,9 +29,15 @@ extension FirestoreServiceImpl {
       throw DTOError.castIDFailed
     }
     
-    let docPath: DocumentReference = getDocumentPath(col: collection, docID: id)
+    let docPath: DocumentReference = getDocumentPath(
+      col: collection,
+      docID: id
+    )
     
-    try addDocument(docPath: docPath, dto: dto)
+    try addDocument(
+      docPath: docPath,
+      dto: dto
+    )
   }
   
   func fetch<T: DTO>(
