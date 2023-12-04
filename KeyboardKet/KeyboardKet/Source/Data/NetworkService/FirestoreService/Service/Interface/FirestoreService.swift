@@ -14,4 +14,9 @@ protocol FirestoreService {
     col: FirestoreCollection,
     dto: T
   ) throws
+  
+  func fetch<T: DTO>(
+    col collection: FirestoreCollection,
+    docID documentID: String
+  ) async throws -> T
 }

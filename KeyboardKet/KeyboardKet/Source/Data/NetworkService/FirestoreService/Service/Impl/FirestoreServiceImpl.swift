@@ -33,6 +33,22 @@ extension FirestoreServiceImpl {
     
     try addDocument(docPath: docPath, dto: dto)
   }
+  
+  func fetch<T: DTO>(
+    col collection: FirestoreCollection,
+    docID documentID: String
+  ) async throws -> T {
+    let path: DocumentReference = getDocumentPath(
+      col: collection,
+      docID: documentID
+    )
+    
+    let document: DocumentSnapshot = try await getDocument(docPath: path)
+    
+    let dto: T = try document.data(as: T.self)
+    
+    return dto
+  }
 }
 
 
