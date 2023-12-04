@@ -260,4 +260,11 @@ private extension FirestoreServiceImpl {
     
     return fields
   }
+  
+  func updateDocument(
+    docPath: DocumentReference,
+    fields: [String: Any]
+  ) {
+    docPath.updateData(fields)
+  }
 }
