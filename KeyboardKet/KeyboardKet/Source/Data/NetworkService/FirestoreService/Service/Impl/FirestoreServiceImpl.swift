@@ -49,6 +49,20 @@ extension FirestoreServiceImpl {
     
     return dto
   }
+  
+  func fetch<T: DTO>(
+    col collection: FirestoreCollection
+  ) async throws -> [T] {
+    let path: CollectionReference = getCollectionPath(col: collection)
+    
+    let documents: [QueryDocumentSnapshot] = try await getDocuments(colPath: path)
+    
+    let dtoArray: [T] = try documents.map { document in
+      try document.data(as: T.self)
+    }
+    
+    return dtoArray
+  }
 }
 
 
