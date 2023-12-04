@@ -237,4 +237,21 @@ private extension FirestoreServiceImpl {
     
     return snapshot.documents
   }
+  
+  // MARK: - Update
+  func makeFields<T: DTO>(
+    updateFields: [FirestoreField],
+    dto: T
+  ) -> [String: Any] {
+    let fieldDictionary = dto.asDictionary
+    var fields: [String: Any]
+    
+    updateFields.forEach { field in
+      guard let value = fieldDictionary[field.name] else { return }
+      
+      fields.updateValue(value, forKey: field.name)
+    }
+    
+    return fields
+  }
 }
