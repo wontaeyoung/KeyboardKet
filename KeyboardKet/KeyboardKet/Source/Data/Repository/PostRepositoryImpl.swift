@@ -5,8 +5,6 @@
 //  Created by 원태영 on 12/2/23.
 //
 
-import FirebaseFirestore
-
 final class PostRepositoryImpl: PostRepository {
   // MARK: - Property
   private let firestoreService: FirestoreService
@@ -22,7 +20,7 @@ final class PostRepositoryImpl: PostRepository {
       throw DTOError.mapToDTOFailed
     }
     
-    let documentPath: DocumentReference = firestoreService.getDocumentPath(
+    let documentPath = firestoreService.getDocumentPath(
       col: .Post,
       docID: dto.id
     )
@@ -31,6 +29,8 @@ final class PostRepositoryImpl: PostRepository {
   }
   
   func fetchPosts() async throws -> [Post] {
+    let colPath = firestoreService.getCollectionPath(col: .Post)
+    
     
   }
   
