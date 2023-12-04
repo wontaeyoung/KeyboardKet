@@ -31,7 +31,7 @@ final class PostRepositoryImpl: PostRepository {
   func fetchPosts() async throws -> [Post] {
     let colPath = firestoreService.getCollectionPath(col: .Post)
     
-    
+    return []
   }
   
   func updatePost(post: Post) {
