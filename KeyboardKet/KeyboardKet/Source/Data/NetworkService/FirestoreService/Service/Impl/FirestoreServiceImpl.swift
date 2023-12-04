@@ -250,7 +250,7 @@ private extension FirestoreServiceImpl {
     dto: T
   ) -> [String: Any] {
     let fieldDictionary = dto.asDictionary
-    var fields: [String: Any]
+    var fields: [String: Any] = [:]
     
     updateFields.forEach { field in
       guard let value = fieldDictionary[field.name] else { return }
