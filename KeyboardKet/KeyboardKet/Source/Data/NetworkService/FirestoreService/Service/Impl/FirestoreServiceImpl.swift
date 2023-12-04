@@ -89,6 +89,31 @@ extension FirestoreServiceImpl {
     
     return dtoArray
   }
+  
+  func update<T: DTO>(
+    col collection: FirestoreCollection,
+    dto: T,
+    updateFields: [FirestoreField]
+  ) throws {
+    guard let id = dto.id as? String else {
+      throw DTOError.castIDFailed
+    }
+    
+    let path: DocumentReference = getDocumentPath(
+      col: collection,
+      docID: id
+    )
+    
+    let fields: [String: Any] = makeFields(
+      updateFields: updateFields,
+      dto: dto
+    )
+    
+    updateDocument(
+      docPath: path,
+      fields: fields
+    )
+  }
 }
 
 
