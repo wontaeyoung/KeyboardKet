@@ -19,8 +19,26 @@ final class FirestoreServiceImpl: FirestoreService {
   }
 }
 
-// MARK: - Path
+// MARK: - CRUD Interface
 extension FirestoreServiceImpl {
+  func create<T: DTO>(
+    col: FirestoreCollection,
+    dto: T
+  ) throws {
+    guard let id = dto.id as? String else {
+      throw DTOError.castIDFailed
+    }
+    
+    let docPath: DocumentReference = getDocumentPath(col: col, docID: id)
+    
+    try addDocument(docPath: docPath, dto: dto)
+  }
+}
+
+
+// MARK: - Private
+private extension FirestoreServiceImpl {
+  // MARK: - Path
   func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference {
     return firestore
       .collection(collection.name)
@@ -58,62 +76,17 @@ extension FirestoreServiceImpl {
       .collection(subCollection.name)
       .document(subDocumentID)
   }
-}
-
-// MARK: - Create
-extension FirestoreServiceImpl {
+  
+  // MARK: - Create
   func addDocument<T: DTO>(
     docPath documentPath: DocumentReference,
     dto: T
   ) throws {
     try documentPath.setData(from: dto)
   }
-}
-
-// MARK: - Read
-extension FirestoreServiceImpl {
-  func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot {
-    let document: DocumentSnapshot = try await documentPath.getDocument()
-    
-    guard document.exists else {
-      throw FirestoreError.noDocument(document: document)
-    }
-    
-    return document
-  }
   
-  func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot] {
-    let snapshot: QuerySnapshot = try await collectionPath.getDocuments()
-    
-    guard snapshot.isEmpty == false else {
-      throw FirestoreError.emptyCollection
-    }
-    
-    return snapshot.documents
-  }
-  
-  func getDocuments(
-    colPath collectionPath: CollectionReference,
-    field: FirestoreField,
-    operation: FirestoreQueryOperation
-  ) async throws -> [QueryDocumentSnapshot] {
-    let query: Query = makeQuery(
-      collectionPath,
-      field: field,
-      operation: operation
-    )
-    
-    let snapshot: QuerySnapshot = try await query.getDocuments()
-    
-    guard snapshot.isEmpty == false else {
-      throw FirestoreError.emptyQuery
-    }
-    
-    return snapshot.documents
-  }
-  
-  // MARK: - Private
-  private func makeQuery(
+  // MARK: - Read
+  func makeQuery(
     _ collectionPath: CollectionReference,
     field: FirestoreField,
     operation: FirestoreQueryOperation
@@ -174,19 +147,44 @@ extension FirestoreServiceImpl {
         )
     }
   }
-}
-
-extension FirestoreServiceImpl {
-  func create<T: DTO>(
-    col: FirestoreCollection,
-    dto: T
-  ) throws {
-    guard let id = dto.id as? String else {
-      throw DTOError.castIDFailed
+  
+  func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot {
+    let document: DocumentSnapshot = try await documentPath.getDocument()
+    
+    guard document.exists else {
+      throw FirestoreError.noDocument(document: document)
     }
     
-    let docPath: DocumentReference = getDocumentPath(col: col, docID: id)
+    return document
+  }
+  
+  func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot] {
+    let snapshot: QuerySnapshot = try await collectionPath.getDocuments()
     
-    try addDocument(docPath: docPath, dto: dto)
+    guard snapshot.isEmpty == false else {
+      throw FirestoreError.emptyCollection
+    }
+    
+    return snapshot.documents
+  }
+  
+  func getDocuments(
+    colPath collectionPath: CollectionReference,
+    field: FirestoreField,
+    operation: FirestoreQueryOperation
+  ) async throws -> [QueryDocumentSnapshot] {
+    let query: Query = makeQuery(
+      collectionPath,
+      field: field,
+      operation: operation
+    )
+    
+    let snapshot: QuerySnapshot = try await query.getDocuments()
+    
+    guard snapshot.isEmpty == false else {
+      throw FirestoreError.emptyQuery
+    }
+    
+    return snapshot.documents
   }
 }
