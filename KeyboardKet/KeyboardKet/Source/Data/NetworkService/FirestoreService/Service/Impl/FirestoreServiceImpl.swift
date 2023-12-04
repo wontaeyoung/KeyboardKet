@@ -22,14 +22,14 @@ final class FirestoreServiceImpl: FirestoreService {
 // MARK: - CRUD Interface
 extension FirestoreServiceImpl {
   func create<T: DTO>(
-    col: FirestoreCollection,
+    col collection: FirestoreCollection,
     dto: T
   ) throws {
     guard let id = dto.id as? String else {
       throw DTOError.castIDFailed
     }
     
-    let docPath: DocumentReference = getDocumentPath(col: col, docID: id)
+    let docPath: DocumentReference = getDocumentPath(col: collection, docID: id)
     
     try addDocument(docPath: docPath, dto: dto)
   }

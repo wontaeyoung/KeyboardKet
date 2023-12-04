@@ -11,7 +11,7 @@ protocol FirestoreService {
   associatedtype FirestoreField = any FirestoreFieldProtocol
   
   func create<T: DTO>(
-    col: FirestoreCollection,
+    col collection: FirestoreCollection,
     dto: T
   ) throws
   
