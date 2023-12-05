@@ -25,9 +25,15 @@ final class PostRepositoryImpl: PostRepository {
   }
   
   func fetchPosts() async throws -> [Post] {
-    let colPath = firestoreService.getCollectionPath(col: .Post)
+    let postsDTO: [PostDTO] = try await firestoreService.fetch(
+      col: .Post,
+      field: FirestoreField.Post.createAt,
+      operation: .orderBy(type: .descending)
+    )
     
-    return []
+    let posts: [Post] = try postsDTO.map { try $0.toModel() }
+    
+    return posts
   }
   
   func updatePost(post: Post) throws {
