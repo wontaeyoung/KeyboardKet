@@ -30,8 +30,16 @@ final class PostRepositoryImpl: PostRepository {
     return []
   }
   
-  func updatePost(post: Post) {
+  func updatePost(post: Post) throws {
+    let postDTO: PostDTO = try post.toDTO()
     
+    let updateFields: [FirestoreField.Post] = [.title, .content, .updateAt]
+    
+    try firestoreService.update(
+      col: .Post,
+      dto: postDTO,
+      updateFields: updateFields
+    )
   }
   
   func deletePost(postID: String) {
