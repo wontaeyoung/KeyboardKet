@@ -18,7 +18,7 @@ struct PostDTO: DTO {
   let status: Post.Status
   
   // MARK: - Mapping
-  func toModel() throws -> Model {
+  func toModel() throws -> Post {
     guard let uuid = UUID(uuidString: id) else {
       throw DTOError.mapToModelFailed
     }

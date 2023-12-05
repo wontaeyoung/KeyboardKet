@@ -6,7 +6,9 @@
 //
 
 protocol DTO: Codable, Identifiable {
-  func toModel() throws -> Model
+  associatedtype ModelImpl: Model
+  
+  func toModel() throws -> ModelImpl
 }
 
 extension DTO {
