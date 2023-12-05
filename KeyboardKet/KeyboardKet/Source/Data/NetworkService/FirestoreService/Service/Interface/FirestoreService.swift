@@ -24,9 +24,9 @@ protocol FirestoreService {
     col collection: FirestoreCollection
   ) async throws -> [T]
   
-  func fetch<T: DTO>(
+  func fetch<T: DTO, U: FirestoreFieldProtocol>(
     col collection: FirestoreCollection,
-    field firestoreField: FirestoreField,
+    field firestoreField: U,
     operation: FirestoreQueryOperation
   ) async throws -> [T]
   
