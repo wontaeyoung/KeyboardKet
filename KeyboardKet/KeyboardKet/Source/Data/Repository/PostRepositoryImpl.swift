@@ -16,13 +16,11 @@ final class PostRepositoryImpl: PostRepository {
   
   // MARK: - Method
   func createPost(post: Post) throws {
-    guard let dto = try post.toDTO() as? PostDTO else {
-      throw DTOError.mapToDTOFailed
-    }
+    let postDTO: PostDTO = try post.toDTO()
     
     try firestoreService.create(
       col: .Post,
-      dto: dto
+      dto: postDTO
     )
   }
   
