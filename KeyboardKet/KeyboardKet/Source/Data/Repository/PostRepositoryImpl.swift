@@ -20,12 +20,10 @@ final class PostRepositoryImpl: PostRepository {
       throw DTOError.mapToDTOFailed
     }
     
-    let documentPath = firestoreService.getDocumentPath(
+    try firestoreService.create(
       col: .Post,
-      docID: dto.id
+      dto: dto
     )
-    
-    try firestoreService.addDocument(docPath: documentPath, dto: dto)
   }
   
   func fetchPosts() async throws -> [Post] {
