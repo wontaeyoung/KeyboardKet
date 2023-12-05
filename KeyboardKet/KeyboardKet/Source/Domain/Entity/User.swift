@@ -16,7 +16,7 @@ struct User: Model {
   let createAt: Date
   
   // MARK: - Mapping
-  func toDTO() throws -> any DTO {
+  func toDTO() throws -> UserDTO {
     return UserDTO(
       id: id.uuidString,
       nickname: nickname,
