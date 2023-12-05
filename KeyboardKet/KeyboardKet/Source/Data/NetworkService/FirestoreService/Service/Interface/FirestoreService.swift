@@ -30,9 +30,9 @@ protocol FirestoreService {
     operation: FirestoreQueryOperation
   ) async throws -> [T]
   
-  func update<T: DTO>(
+  func update<T: DTO, U: FirestoreFieldProtocol>(
     col collection: FirestoreCollection,
     dto: T,
-    updateFields: [FirestoreField]
+    updateFields: [U]
   ) throws
 }

@@ -90,10 +90,10 @@ extension FirestoreServiceImpl {
     return dtoArray
   }
   
-  func update<T: DTO>(
+  func update<T: DTO, U: FirestoreFieldProtocol>(
     col collection: FirestoreCollection,
     dto: T,
-    updateFields: [FirestoreField]
+    updateFields: [U]
   ) throws {
     guard let id = dto.id as? String else {
       throw DTOError.castIDFailed
