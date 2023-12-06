@@ -290,4 +290,10 @@ private extension FirestoreServiceImpl {
   ) {
     docPath.updateData(fields)
   }
+  
+  func deleteDocument(
+    docPath: DocumentReference
+  ) {
+    docPath.delete()
+  }
 }
