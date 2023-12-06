@@ -112,6 +112,18 @@ extension FirestoreServiceImpl {
       fields: fields
     )
   }
+  
+  func delete(
+    col colledtion: FirestoreCollection,
+    docID documentID: String
+  ) {
+    let path: DocumentReference = getDocumentPath(
+      col: colledtion,
+      docID: documentID
+    )
+    
+    deleteDocument(docPath: path)
+  }
 }
 
 

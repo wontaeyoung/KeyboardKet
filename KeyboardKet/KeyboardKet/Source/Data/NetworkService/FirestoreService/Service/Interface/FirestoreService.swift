@@ -33,4 +33,9 @@ protocol FirestoreService {
     dto: T,
     updateFields: [U]
   ) throws
+  
+  func delete(
+    col colledtion: FirestoreCollection,
+    docID documentID: String
+  )
 }
