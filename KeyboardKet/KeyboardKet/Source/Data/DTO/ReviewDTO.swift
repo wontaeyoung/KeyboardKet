@@ -16,8 +16,8 @@ struct ReviewDTO: DTO {
   let createAt: Date
   
   // MARK: - Mapping
-  func toModel() throws -> Model {
-    guard 
+  func toModel() throws -> Review {
+    guard
       let uuid = UUID(uuidString: id),
       let postUUID = UUID(uuidString: postID),
       let traderUUID = UUID(uuidString: traderID)

@@ -6,5 +6,7 @@
 //
 
 protocol Model {
-  func toDTO() throws -> DTO
+  associatedtype DTOImpl
+  
+  func toDTO() throws -> DTOImpl
 }

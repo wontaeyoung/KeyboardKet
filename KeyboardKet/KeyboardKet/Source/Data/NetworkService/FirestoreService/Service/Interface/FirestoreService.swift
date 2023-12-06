@@ -8,43 +8,34 @@
 import FirebaseFirestore
 
 protocol FirestoreService {
-  associatedtype FirestoreField = any FirestoreFieldProtocol
-  
-  // MARK: - Path
-  func getCollectionPath(col collection: FirestoreCollection) -> CollectionReference
-  
-  func getDocumentPath(
+  func create<T: DTO>(
     col collection: FirestoreCollection,
-    docID documentID: String
-  ) -> DocumentReference
-  
-  func getCollectionPath(
-    supCol superCollection: FirestoreCollection,
-    supDocID superDocumentID: String,
-    subCol subCollection: FirestoreCollection
-  ) -> CollectionReference
-  
-  func getDocumentPath(
-    supCol superCollection: FirestoreCollection,
-    supDocID superDocumentID: String,
-    subCol subCollection: FirestoreCollection,
-    subDocID subDocumentID: String
-  ) -> DocumentReference
-  
-  // MARK: - Create
-  func addDocument(
-    docPath documentPath: DocumentReference,
-    dto: DTO
+    dto: T
   ) throws
   
-  // MARK: - Read
-  func getDocument(docPath documentPath: DocumentReference) async throws -> DocumentSnapshot
+  func fetch<T: DTO>(
+    col collection: FirestoreCollection,
+    docID documentID: String
+  ) async throws -> T
   
-  func getDocuments(colPath collectionPath: CollectionReference) async throws -> [QueryDocumentSnapshot]
+  func fetch<T: DTO>(
+    col collection: FirestoreCollection
+  ) async throws -> [T]
   
-  func getDocuments(
-    colPath collectionPath: CollectionReference,
-    field: FirestoreField,
+  func fetch<T: DTO, U: FirestoreFieldProtocol>(
+    col collection: FirestoreCollection,
+    field firestoreField: U,
     operation: FirestoreQueryOperation
-  ) async throws -> [QueryDocumentSnapshot]
+  ) async throws -> [T]
+  
+  func update<T: DTO, U: FirestoreFieldProtocol>(
+    col collection: FirestoreCollection,
+    dto: T,
+    updateFields: [U]
+  ) throws
+  
+  func delete(
+    col colledtion: FirestoreCollection,
+    docID documentID: String
+  )
 }

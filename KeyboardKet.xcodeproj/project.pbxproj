@@ -31,8 +31,10 @@
 		6E7961972B07C0CC00FA6609 /* KeyboardKetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961962B07C0CC00FA6609 /* KeyboardKetUITests.swift */; };
 		6E7961992B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7961982B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift */; };
 		6E9657922B1A3B7300B175C2 /* FirestoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC662222B13977C00E1BC7B /* FirestoreError.swift */; };
+		6E9657952B1A3F7100B175C2 /* PostRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9657942B1A3F7100B175C2 /* PostRepositoryImpl.swift */; };
 		6EA192A02B175C3000F8515B /* FirestoreFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA1929F2B175C3000F8515B /* FirestoreFieldProtocol.swift */; };
 		6EA192A62B176B1000F8515B /* FirestoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA192A52B176B1000F8515B /* FirestoreServiceImpl.swift */; };
+		6EB5AC5A2B1BAFB000D80C04 /* Query+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5AC592B1BAFB000D80C04 /* Query+.swift */; };
 		6EC6621A2B13957000E1BC7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC662192B13957000E1BC7B /* GoogleService-Info.plist */; };
 		6EC6622A2B139CA300E1BC7B /* FirestoreSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC662292B139CA300E1BC7B /* FirestoreSchema.swift */; };
 		6EC662302B139E9B00E1BC7B /* FirestoreCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6622F2B139E9B00E1BC7B /* FirestoreCollection.swift */; };
@@ -94,8 +96,10 @@
 		6E7961922B07C0CC00FA6609 /* KeyboardKetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardKetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7961962B07C0CC00FA6609 /* KeyboardKetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKetUITests.swift; sourceTree = "<group>"; };
 		6E7961982B07C0CC00FA6609 /* KeyboardKetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E9657942B1A3F7100B175C2 /* PostRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepositoryImpl.swift; sourceTree = "<group>"; };
 		6EA1929F2B175C3000F8515B /* FirestoreFieldProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreFieldProtocol.swift; sourceTree = "<group>"; };
 		6EA192A52B176B1000F8515B /* FirestoreServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServiceImpl.swift; sourceTree = "<group>"; };
+		6EB5AC592B1BAFB000D80C04 /* Query+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+.swift"; sourceTree = "<group>"; };
 		6EC662192B13957000E1BC7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EC662222B13977C00E1BC7B /* FirestoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreError.swift; sourceTree = "<group>"; };
 		6EC662292B139CA300E1BC7B /* FirestoreSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreSchema.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		6E6F9F802B1A390000D307F7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6E9657932B1A3F5400B175C2 /* Repository */,
 				6E6F9F832B1A3A2B00D307F7 /* NetworkService */,
 				6E5AF79C2B0D0F70007F8B6E /* DTO */,
 			);
@@ -227,6 +232,7 @@
 		6E6F9F822B1A390F00D307F7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6EB5AC582B1BAFA500D80C04 /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -313,6 +319,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		6E9657932B1A3F5400B175C2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				6E9657942B1A3F7100B175C2 /* PostRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		6EA192A42B1769AC00F8515B /* Impl */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +361,14 @@
 				6E6F9F822B1A390F00D307F7 /* Utility */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		6EB5AC582B1BAFA500D80C04 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5AC592B1BAFB000D80C04 /* Query+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6EC662202B13976000E1BC7B /* Definition */ = {
@@ -564,9 +586,11 @@
 				6E5AF7A72B0D22B8007F8B6E /* PostDTO.swift in Sources */,
 				6E11E85A2B0E69230042FC91 /* ModelError.swift in Sources */,
 				6EC662302B139E9B00E1BC7B /* FirestoreCollection.swift in Sources */,
+				6E9657952B1A3F7100B175C2 /* PostRepositoryImpl.swift in Sources */,
 				6E11E85C2B0E6C500042FC91 /* ReviewDTO.swift in Sources */,
 				6EC662352B13A0C700E1BC7B /* FirestoreField.swift in Sources */,
 				6E5AF7A92B0D2C8B007F8B6E /* Post.swift in Sources */,
+				6EB5AC5A2B1BAFB000D80C04 /* Query+.swift in Sources */,
 				6EA192A62B176B1000F8515B /* FirestoreServiceImpl.swift in Sources */,
 				6E11E85E2B0E79AD0042FC91 /* Review.swift in Sources */,
 				6E5AF7A52B0D1FF7007F8B6E /* Model.swift in Sources */,

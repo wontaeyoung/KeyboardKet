@@ -16,8 +16,8 @@ struct UserDTO: DTO {
   let createAt: Date
   
   // MARK: - Mapping
-  func toModel() throws -> Model {
-    guard 
+  func toModel() throws -> User {
+    guard
       let uuid = UUID(uuidString: id),
       let url = URL(string: profileImage)
     else {
