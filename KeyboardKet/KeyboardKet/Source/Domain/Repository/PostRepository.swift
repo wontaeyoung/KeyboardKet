@@ -9,5 +9,5 @@ protocol PostRepository {
   func createPost(post: Post) throws
   func fetchPosts() async throws -> [Post]
   func updatePost(post: Post) throws
-  func deletePost(postID: String)
+  func deletePost(post: Post)
 }
