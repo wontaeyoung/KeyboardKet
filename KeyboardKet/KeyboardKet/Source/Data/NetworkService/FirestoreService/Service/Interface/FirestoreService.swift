@@ -8,8 +8,6 @@
 import FirebaseFirestore
 
 protocol FirestoreService {
-  associatedtype FirestoreField = any FirestoreFieldProtocol
-  
   func create<T: DTO>(
     col collection: FirestoreCollection,
     dto: T

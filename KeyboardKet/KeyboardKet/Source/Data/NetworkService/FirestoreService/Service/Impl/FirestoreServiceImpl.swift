@@ -8,8 +8,6 @@
 import FirebaseFirestore
 
 final class FirestoreServiceImpl: FirestoreService {
-  typealias FirestoreField = any FirestoreFieldProtocol
-  
   // MARK: - Property
   private let firestore: Firestore
   
@@ -169,7 +167,7 @@ private extension FirestoreServiceImpl {
   // MARK: - Read
   func makeQuery(
     _ collectionPath: CollectionReference,
-    field: FirestoreField,
+    field: any FirestoreFieldProtocol,
     operation: FirestoreQueryOperation
   ) -> Query {
     switch operation {
@@ -251,7 +249,7 @@ private extension FirestoreServiceImpl {
   
   func getDocuments(
     colPath collectionPath: CollectionReference,
-    field: FirestoreField,
+    field: any FirestoreFieldProtocol,
     operation: FirestoreQueryOperation
   ) async throws -> [QueryDocumentSnapshot] {
     let query: Query = makeQuery(
@@ -271,7 +269,7 @@ private extension FirestoreServiceImpl {
   
   // MARK: - Update
   func makeFields<T: DTO>(
-    updateFields: [FirestoreField],
+    updateFields: [any FirestoreFieldProtocol],
     dto: T
   ) -> [String: Any] {
     let fieldDictionary = dto.asDictionary
