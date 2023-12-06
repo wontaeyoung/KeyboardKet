@@ -48,7 +48,10 @@ final class PostRepositoryImpl: PostRepository {
     )
   }
   
-  func deletePost(postID: String) {
-    
+  func deletePost(post: Post) {
+    firestoreService.delete(
+      col: .Post,
+      docID: post.id.uuidString
+    )
   }
 }
