@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-final class FirebaseAuthServiceImpl {
+final class FirebaseAuthServiceImpl: FirebaseAuthService {
   // MARK: - Property
   private let auth: Auth = .auth()
   
@@ -32,5 +32,16 @@ final class FirebaseAuthServiceImpl {
           throw FirebaseAuthError.unknown
       }
     }
+  }
+  
+  func signIn(
+    email: String,
+    password: String
+  ) async throws {
+    
+  }
+  
+  func signOut() async throws {
+    
   }
 }
