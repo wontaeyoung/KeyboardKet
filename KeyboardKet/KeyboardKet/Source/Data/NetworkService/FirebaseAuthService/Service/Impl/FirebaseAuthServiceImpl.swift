@@ -32,6 +32,15 @@ final class FirebaseAuthServiceImpl: FirebaseAuthService {
         case .networkError:
           throw FirebaseAuthError.networkError
           
+        case .emailAlreadyInUse:
+          throw FirebaseAuthError.emailAlreadyInUse
+          
+        case .invalidEmail:
+          throw FirebaseAuthError.invalidEmail
+          
+        case .weakPassword:
+          throw FirebaseAuthError.weakPassword
+          
         default:
           throw FirebaseAuthError.unknown
       }
@@ -53,6 +62,12 @@ final class FirebaseAuthServiceImpl: FirebaseAuthService {
       switch errorCode {
         case .networkError:
           throw FirebaseAuthError.networkError
+          
+        case .userNotFound:
+          throw FirebaseAuthError.userNotFound
+          
+        case .wrongPassword:
+          throw FirebaseAuthError.wrongPassword
           
         default:
           throw FirebaseAuthError.unknown
