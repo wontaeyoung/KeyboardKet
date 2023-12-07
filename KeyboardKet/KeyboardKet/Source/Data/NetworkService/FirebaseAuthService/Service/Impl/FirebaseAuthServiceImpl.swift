@@ -11,6 +11,10 @@ final class FirebaseAuthServiceImpl: FirebaseAuthService {
   // MARK: - Property
   private let auth: Auth = .auth()
   
+  var isUserLoggedIn: Bool {
+    return auth.currentUser != nil
+  }
+  
   // MARK: - Method
   func signUp(
     email: String,

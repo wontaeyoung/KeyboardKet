@@ -6,6 +6,10 @@
 //
 
 protocol FirebaseAuthService {
+  // MARK: - Property
+  var isUserLoggedIn: Bool { get }
+  
+  // MARK: - Method
   func signUp(
     email: String,
     password: String
