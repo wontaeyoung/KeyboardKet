@@ -56,7 +56,7 @@ final class FirebaseAuthServiceImpl: FirebaseAuthService {
     }
   }
   
-  func signOut() async throws {
-    
+  func signOut() throws {
+    try auth.signOut()
   }
 }

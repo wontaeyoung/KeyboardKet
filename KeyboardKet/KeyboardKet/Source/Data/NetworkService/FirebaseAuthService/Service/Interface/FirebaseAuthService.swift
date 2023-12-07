@@ -16,5 +16,5 @@ protocol FirebaseAuthService {
     password: String
   ) async throws
   
-  func signOut() async throws
+  func signOut() throws
 }
