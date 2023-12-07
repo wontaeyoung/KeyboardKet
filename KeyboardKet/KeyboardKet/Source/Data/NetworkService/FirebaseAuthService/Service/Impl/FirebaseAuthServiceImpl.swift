@@ -38,7 +38,22 @@ final class FirebaseAuthServiceImpl: FirebaseAuthService {
     email: String,
     password: String
   ) async throws {
-    
+    do {
+      try await auth.signIn(
+        withEmail: email,
+        password: password
+      )
+    } catch let nsError as NSError {
+      let errorCode: AuthErrorCode.Code = AuthErrorCode(_nsError: nsError).code
+      
+      switch errorCode {
+        case .networkError:
+          throw FirebaseAuthError.networkError
+          
+        default:
+          throw FirebaseAuthError.unknown
+      }
+    }
   }
   
   func signOut() async throws {
