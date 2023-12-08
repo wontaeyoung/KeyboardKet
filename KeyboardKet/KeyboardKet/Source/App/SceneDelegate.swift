@@ -19,7 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       return
     }
     
-    let initialViewController: UIViewController = ViewController()
+    let initialViewController: UIViewController
+    let isAuthSignInEnabled: Bool = FirebaseAuthServiceImpl().isUserLoggedIn
+    
+    if isAuthSignInEnabled {
+      initialViewController = UIViewController()
+    } else {
+      // TODO: Login View 구현 후 교체
+      initialViewController = UIViewController()
+    }
     
     window = UIWindow(windowScene: windowScene)
     window?.rootViewController = initialViewController
